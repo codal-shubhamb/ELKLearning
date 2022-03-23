@@ -22,7 +22,6 @@ node {
        app.push("latest")        
               }    
            }
-	}
 
 	stage('Deploy') {
 		sh ("docker run -d -p 80:8080 -v /var/log/:/var/log/ ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
